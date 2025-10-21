@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Demo2App: App {
+    @State var wkDataStore = WKDataStore()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(wkDataStore)
         }
     }
 }
