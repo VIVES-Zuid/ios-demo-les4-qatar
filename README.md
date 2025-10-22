@@ -85,6 +85,13 @@ ContentView().environment(wkDataStore)
 // In DetailNameView.swift
 @Environment(WKDataStore.self) var wkDataStore
 ```
+In every view where needed you can now inject the **Environment** variable as following:
+
+```swift
+// In WelcomeView.swift
+struct WelcomeView: View {
+    @Environment(WKResultDatastore.self) private var wkresultDataStore
+```
 
 **Key Features:**
 - **Automatic Propagation**: Environment values automatically flow down the view tree
